@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta,forbici e sasso</title>
+    <style>
+        #div{
+            text-align: center;
+            width: 900px;
+            height: 50px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <p id="zes"></p>
+    <div id="div"></div>
+    <script>
+        function solution(){
+    let matte=Math.floor(Math.random()*3+1)
+    return matte
+
+}
+let p=document.getElementById("zes")
+let arr=[]
+let nr=0
+//let nr2=0
+let div=document.getElementById("div")
+for(i=0;i<100;i++){
+    arr[i]=solution()
+    if(arr[i]%3==1){
+        nr+=2
+ }else if(arr[i]%3==0){
+     nr+=1
+ }
+}
+p.innerHTML="SE VINCI OTTIENI 2 PUNTI, SE PAREGGI 1 PUNTO"
+div.innerHTML ="LA MEDIA DEI TUOI PUNTI SE LANCI SEMPRE SASSO SU 100 VOLTE E` "+ parseInt(nr)+" PUNTI"
+//io ho sasso
+//arr[i]%3==0(sasso)
+//arr[i]%3==1(forbice)
+//arr[i]%2==(carta)
+
+
+
+        </script>
+</body>
+</html>

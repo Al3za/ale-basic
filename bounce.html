@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<canvas id="can" width="400" height="400" style="border: 1px solid black;"></canvas>
+<body>
+    <script>
+         let can=document.getElementById("can")
+     let form=can.getContext("2d")
+      let speed=5
+      let speed2=10
+     let x=30
+     let y=100
+     
+     let move;
+
+    
+     function gioco(){
+      
+        ale=requestAnimationFrame(gioco)
+        form.clearRect(0,0,400,400)
+        if(move!=0){
+            form.beginPath()
+           
+            form.fillStyle="red"
+            form.fillRect(x+=speed,y+=speed2,30,30)  
+            form.closePath()
+     
+    
+        if(x>386){
+         speed=-speed
+            form.beginPath()
+           
+            form.fillStyle="red"
+            form.fillRect(x+=speed,y,30,30)  
+            form.closePath()}
+ if(x<14){
+     speed=-speed
+        form.beginPath()
+            
+            form.fillStyle="red"
+            form.fillRect(x-=speed,y,30,30)  
+        
+     form.closePath()}
+     
+     if(y<14){
+    speed2=speed2
+    form.beginPath()
+         
+            form.fillStyle="red"
+            form.fillRect(x,y+=speed2,30,30)  
+            form.closePath()}
+        if(y>386){ 
+            speed2=-speed2
+            form.beginPath()
+           
+            form.fillStyle="red"
+            form.fillRect(x,y+=speed2,30,30)  
+            form.closePath()}
+     
+     }}
+     gioco()
+
+     window.addEventListener("keydown",function(){
+         move=0
+     })
+    
+    </script>
+</body>
+</html>

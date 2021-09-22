@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #myDiv{
+        text-align: center;
+        background-color: coral;
+        width: 100px;
+        height: 200;
+        
+      }
+    </style>
+</head>
+<body>
+  <div id="myDiv">
+  
+  </div>
+   <p id="ale"></p>
+   <p id="dany"></p>
+   <script>
+    // let div=document.getElementsByClassName("myDiv")
+     let ale=document.getElementById("ale")
+     let dany=document.getElementById("dany")
+     let zes=document.getElementById("myDiv")
+     
+    
+   
+     let nr=[]
+   window.addEventListener("dblclick",function(){
+     let date=new Date()
+    let tempo=parseInt(date.getTime()/1000)
+    nr.push(tempo)
+     for(i=0;i<nr.length;i++){
+     if(i>0){
+     
+      zes.innerHTML="du dbclickade sensaste "+(nr[i]-nr[i-1])+" sekunder sedan"
+     
+     
+    
+      }
+     }
+    
+     
+  
+   
+   })
+    
+   
+   
+    
+
+   
+      
+   </script>
+</body>
+</html>

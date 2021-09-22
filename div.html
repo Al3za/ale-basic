@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            
+           border: 1px solid red;
+           padding: 8px;
+           color: red;
+            font-size: 80px;
+            text-align: center;
+            
+            }
+            p{
+                text-indent: 50px;
+            }
+    </style>
+    </head>
+
+<body>
+    <h2 id="mydiv" ></h2>
+    <p id="tid"></p>
+    <script>
+        let nr=0
+    let div=document.getElementById("mydiv")
+    let par=document.getElementById("tid")
+     let date= new Date()
+     let sec=date.getSeconds()
+     
+     
+      let dani=   sec
+         if(dani>10&&dani<30){
+            div.innerHTML="godmorning"
+            setTimeout(morn,3000)
+         }if(dani>30){
+            div.innerHTML="godeftermiddag"
+           // eftermid()
+         }if(dani>40){
+            div.innerHTML="godkväll"
+           // kväll()
+         }
+     
+    
+        function morn(){
+            div.innerHTML="godeftermiddag"
+        }
+        
+   
+        par.innerHTML=sec
+
+        </script>
+</body>
+</html>
